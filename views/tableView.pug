@@ -1,0 +1,37 @@
+html
+  head
+    title=DrinkCheap 
+    style
+      include style.css
+  body
+    a.menu(href='../low/0') Low alkohol (<5%)
+    a.menu(href='../low/') All (<5%)
+    a.menu(href='../medium/0') Medium alkohol (5-10%)
+    a.menu(href='../medium/') All (5-10%)
+    a.menu(href='../med-high/0') medium-high alkohol (10-22%)
+    a.menu(href='../med-high/') All (10-22%)
+    a.menu(href='../high/0') high alkohol (>22%)
+    a.menu(href='../high/') All (>22%)
+    table
+      tr(class='table-row')
+        td Vare
+        td Vare navn
+        td ‱ Alkohol/krone
+        td Volum (l)
+        td Alkohol %
+        td Pris
+        td Pris (l)
+        td Type
+        td URL
+      each val in data
+        tr
+          each row, index in val
+            if index == 'ware_nr'
+              td
+                a(href=val.url target="_blank"): img(src='https://bilder.vinmonopolet.no/cache/300x300-0/'+row+'-1.jpg' height="30%" alt=row)
+            else if index == 'url'
+              td 
+                a(href=row target="_blank") Link
+            else
+              td= row
+

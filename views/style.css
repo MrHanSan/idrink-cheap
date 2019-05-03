@@ -4,6 +4,9 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 }
+.heading {
+	padding: 25px;
+}
 .menu {
 	padding: 10px;
 	margin: 10px;

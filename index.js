@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/low/:page', (req, res) => {
-    res.render('tableView', {data: apkData.low_alk.slice((100*req.params.page), (100*req.params.page)+100)})
+    res.render('tableView', {data: apkData.low_alk.slice((100*req.params.page), (100*req.params.page)+100), page: req.params.page})
 });
 
 app.get('/low/', (req, res) => {
@@ -22,7 +22,7 @@ app.get('/low/', (req, res) => {
 });
 
 app.get('/medium/:page', (req, res) => {
-    res.render('tableView', {data: apkData.med_alk.slice((100*req.params.page), (100*req.params.page)+100)})
+    res.render('tableView', {data: apkData.med_alk.slice((100*req.params.page), (100*req.params.page)+100), page: req.params.page})
 });
 
 app.get('/medium/', (req, res) => {
@@ -30,7 +30,7 @@ app.get('/medium/', (req, res) => {
 });
 
 app.get('/med-high/:page', (req, res) => {
-    res.render('tableView', {data: apkData.med_high_alk.slice((100*req.params.page), (100*req.params.page)+100)})
+    res.render('tableView', {data: apkData.med_high_alk.slice((100*req.params.page), (100*req.params.page)+100), page: req.params.page})
 });
 
 app.get('/med-high/', (req, res) => {
@@ -38,7 +38,7 @@ app.get('/med-high/', (req, res) => {
 });
 
 app.get('/high/:page', (req, res) => {
-    res.render('tableView', {data: apkData.high_alk.slice((100*req.params.page), (100*req.params.page)+100)})
+    res.render('tableView', {data: apkData.high_alk.slice((100*req.params.page), (100*req.params.page)+100), page: req.params.page})
 });
 
 app.get('/high/', (req, res) => {

@@ -38,7 +38,7 @@ def calculate_apk(all_wares):
             tmp_dict = {}
             tmp_dict['ware_nr'] = row[WARE_NR]
             tmp_dict['name'] = row[WARE_NAME]
-            tmp_dict['apk'] = (float(row[ALK].replace(',', '.'))/float(row[PRICE_L].replace(',', '.'))*100)
+            tmp_dict['apk'] = "%.2f" % (float(row[ALK].replace(',', '.'))/float(row[PRICE_L].replace(',', '.'))*100)
             tmp_dict['vol'] = row[WARE_VOL]
             tmp_dict['alk'] = row[ALK]
             tmp_dict['price'] = row[WARE_PRICE]

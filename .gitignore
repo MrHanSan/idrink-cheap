@@ -59,3 +59,8 @@ typings/
 
 # next.js build output
 .next
+
+# End of auto gen
+apk_data.json
+
+

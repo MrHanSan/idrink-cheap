@@ -1,28 +1,41 @@
 html
   head
-    title=DrinkCheap 
+    title=DrinkCheap
     style
       include style.css
   body
-    h2.heading= 'Page: '+page
-    - var prev = page-1
-    - var next = parseInt(page)+1
-    if page == 0 || page == undefined
-      - prev = 0
-    else
-      a(href="./"+prev) << Prev
-    a.menu(href='../low/0') Low alkohol (<5%)
-    a.menu(href='../low/') All (<5%)
-    a.menu(href='../medium/0') Medium alkohol (5-10%)
-    a.menu(href='../medium/') All (5-10%)
-    a.menu(href='../med-high/0') medium-high alkohol (10-22%)
-    a.menu(href='../med-high/') All (10-22%)
-    a.menu(href='../high/0') high alkohol (>22%)
-    a.menu(href='../high/') All (>22%)
-    if data.length < 100 || page == undefined
-      - next = page
-    else
-      a(href="./"+next) Next >>
+    div
+      section.nav
+        if page == undefined
+          h2.heading All wares in category
+        else
+          h2.heading= 'Page: '+page
+        - var prev = page-1
+        - var next = parseInt(page)+1
+        div#low
+          a.menu(href='../low/0') Low alkohol (<5%)
+          br
+          a.menu(href='../low/') All (<5%)
+        div#med
+          a.menu(href='../medium/0') Medium alkohol (5-10%)
+          br
+          a.menu(href='../medium/') All (5-10%)
+        div#mhigh
+          a.menu(href='../med-high/0') medium-high alkohol (10-22%)
+          br
+          a.menu(href='../med-high/') All (10-22%)
+        div#high
+          a.menu(href='../high/0') high alkohol (>22%)
+          br
+          a.menu(href='../high/') All (>22%)
+        if page == 0 || page == undefined
+          - prev = 0
+        else
+          a.prev(href="./"+prev) << Prev
+        if data.length < 100 || page == undefined
+          - next = page
+        else
+          a.next(href="./"+next) Next >>
     table
       tr(class='table-row')
         td Vare

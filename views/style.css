@@ -1,22 +1,50 @@
 body {
-	text-align: center;
-	width:80%;
-	margin-left:auto;
-	margin-right:auto;
+    text-align: center;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
 }
 .heading {
-	padding: 25px;
+    padding: 25px;
 }
 .menu {
-	padding: 10px;
-	margin: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.prev{
+    padding: 10px;
+    float: left;
+}
+.next {
+    float: right;
+    padding: 10px;
 }
 table {
-	margin-top: 50px;
-	border-collapse: collapse;
-	width: 100%
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 100%
 }
 table, th, td {
-	text-align: center;
-	border-bottom: 1px solid black;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+section {
+    width: 40%;
+    margin: 0 auto;
+}
+div#low {
+    margin: 0 auto;
+    padding: 5px;
+}
+div#med {
+    margin: 0 auto;
+    padding: 5px;
+}
+div#mhigh {
+    margin: 0 auto;
+    padding: 5px;
+}
+div#high {
+    margin: 0 auto;
+    padding: 5px;
 }

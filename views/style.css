@@ -19,6 +19,12 @@ body {
     float: right;
     padding: 10px;
 }
+.index {
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+    margin: 0 auto;
+}
 table {
     margin-top: 50px;
     border-collapse: collapse;
@@ -48,3 +54,4 @@ div#high {
     margin: 0 auto;
     padding: 5px;
 }
+

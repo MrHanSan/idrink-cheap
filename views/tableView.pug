@@ -12,22 +12,18 @@ html
           h2.heading= 'Page: '+page
         - var prev = page-1
         - var next = parseInt(page)+1
-        div#low
-          a.menu(href='../low/0') Low alkohol (<5%)
-          br
-          a.menu(href='../low/') All (<5%)
-        div#med
-          a.menu(href='../medium/0') Medium alkohol (5-10%)
-          br
-          a.menu(href='../medium/') All (5-10%)
-        div#mhigh
-          a.menu(href='../med-high/0') medium-high alkohol (10-22%)
-          br
-          a.menu(href='../med-high/') All (10-22%)
-        div#high
-          a.menu(href='../high/0') high alkohol (>22%)
-          br
-          a.menu(href='../high/') All (>22%)
+        div.index
+          a.prev(href='../low/0') Low alkohol (<5%)
+          a.next(href='../low/') All (<5%)
+        div.index
+          a.prev(href='../medium/0') Medium alkohol (5-10%)
+          a.next(href='../medium/') All (5-10%)
+        div.index
+          a.prev(href='../med-high/0') medium-high alkohol (10-22%)
+          a.next(href='../med-high/') All (10-22%)
+        div.index
+          a.prev(href='../high/0') high alkohol (>22%)
+          a.next(href='../high/') All (>22%)
         if page == 0 || page == undefined
           - prev = 0
         else
@@ -54,7 +50,7 @@ html
               td
                 a(href=val.url target="_blank"): img(src='https://bilder.vinmonopolet.no/cache/300x300-0/'+row+'-1.jpg' height="30%" alt=row)
             else if index == 'url'
-              td 
+              td
                 a(href=row target="_blank") Link
             else
               td= row

@@ -24,14 +24,16 @@ html
         div.index
           a.prev(href='../high/0') high alkohol (>22%)
           a.next(href='../high/') All (>22%)
-        if page == 0 || page == undefined
-          - prev = 0
-        else
-          a.prev(href="./"+prev) << Prev
-        if data.length < 100 || page == undefined
-          - next = page
-        else
-          a.next(href="./"+next) Next >>
+          br
+        div.arrow
+          if page == 0 || page == undefined
+            - prev = 0
+          else
+            a.prev(href="./"+prev) << Prev
+          if data.length < 100 || page == undefined
+            - next = page
+          else
+            a.next(href="./"+next) Next >>
     table
       tr(class='table-row')
         td Vare
@@ -43,6 +45,8 @@ html
         td Pris (l)
         td Type
         td URL
+      tr
+        td Vinmonopolets data er ikke lenger offentlig
       each val in data
         tr
           each row, index in val

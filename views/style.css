@@ -19,6 +19,13 @@ body {
     float: right;
     padding: 10px;
 }
+.arrow{
+    padding: 10px;
+    padding-top: 100px;
+    margin: 10px;
+    width: 350px;
+    margin: 0 auto;
+}
 .index {
     padding: 10px;
     margin: 10px;

@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const fs = require('fs')
-const apkData = JSON.parse(fs.readFileSync('apk_data.json', 'latin1'))
+const apkData = JSON.parse(fs.readFileSync('./apk_data.json', 'latin1'))
 const pug = require('pug');
 
 app.set('view engine', 'pug')
